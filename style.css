@@ -1,0 +1,39 @@
+section {
+  display: inline-flexbox;
+}
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+figure {
+  display: inline-block;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.card {
+  display: inline-block;
+  max-width: 350px;
+  /* max-height: 350px;*/
+  box-shadow: 0 2px 5px 0 lightgrey;
+}
+.card:hover {
+  box-shadow: 2px 4px 7px 2px darkgrey;
+}
+.bigbox {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 250px;
+  background-color: aquamarine;
+  padding: 20px;
+}
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
