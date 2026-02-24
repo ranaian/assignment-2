@@ -23,6 +23,11 @@ body.insertBefore(favorite_items, document.querySelector("footer"));
 
 //add to favorites
 let favButtons = document.querySelectorAll(".fav-button");
+let fav_remove = function (event) {
+  //event.currentTarget.remove();
+  event.currentTarget.parentElement.remove();
+  console.log("clicked remove button");
+};
 let favoritize = function () {
   // add element to favorites by card id
   let newCard = document.createElement("div");
@@ -30,6 +35,10 @@ let favoritize = function () {
   let newH = document.createElement("h5");
   newH.textContent = event.currentTarget.parentElement.id;
   newCard.appendChild(newH);
+  let remFavButton = document.createElement("button");
+  remFavButton.textContent = "Remove from Favorites";
+  remFavButton.addEventListener("click", fav_remove);
+  newCard.appendChild(remFavButton);
   //console.log(event.currentTarget.parentElement.id);
   favorite_items.appendChild(newCard);
 };
